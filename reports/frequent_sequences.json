@@ -1,0 +1,227 @@
+{
+  "source_split": "train",
+  "support_definition": "fraction of contiguous windows of the same length",
+  "min_support": 0.03,
+  "patterns": [
+    {
+      "events": [
+        "hire",
+        "orientation"
+      ],
+      "length": 2,
+      "count": 48,
+      "total_windows": 598,
+      "support": 0.0802675585284281
+    },
+    {
+      "events": [
+        "probation_confirmation",
+        "performance_review"
+      ],
+      "length": 2,
+      "count": 48,
+      "total_windows": 598,
+      "support": 0.0802675585284281
+    },
+    {
+      "events": [
+        "hire",
+        "orientation",
+        "mandatory_training"
+      ],
+      "length": 3,
+      "count": 34,
+      "total_windows": 550,
+      "support": 0.06181818181818182
+    },
+    {
+      "events": [
+        "orientation",
+        "mandatory_training"
+      ],
+      "length": 2,
+      "count": 34,
+      "total_windows": 598,
+      "support": 0.056856187290969896
+    },
+    {
+      "events": [
+        "skills_training",
+        "probation_review"
+      ],
+      "length": 2,
+      "count": 32,
+      "total_windows": 598,
+      "support": 0.05351170568561873
+    },
+    {
+      "events": [
+        "mandatory_training",
+        "role_training"
+      ],
+      "length": 2,
+      "count": 29,
+      "total_windows": 598,
+      "support": 0.048494983277591976
+    },
+    {
+      "events": [
+        "probation_review",
+        "probation_confirmation",
+        "performance_review"
+      ],
+      "length": 3,
+      "count": 25,
+      "total_windows": 550,
+      "support": 0.045454545454545456
+    },
+    {
+      "events": [
+        "follow_up_review",
+        "probation_confirmation",
+        "performance_review"
+      ],
+      "length": 3,
+      "count": 23,
+      "total_windows": 550,
+      "support": 0.04181818181818182
+    },
+    {
+      "events": [
+        "probation_extension",
+        "follow_up_review",
+        "probation_confirmation"
+      ],
+      "length": 3,
+      "count": 23,
+      "total_windows": 550,
+      "support": 0.04181818181818182
+    },
+    {
+      "events": [
+        "probation_review",
+        "probation_extension",
+        "follow_up_review"
+      ],
+      "length": 3,
+      "count": 23,
+      "total_windows": 550,
+      "support": 0.04181818181818182
+    },
+    {
+      "events": [
+        "probation_review",
+        "probation_confirmation"
+      ],
+      "length": 2,
+      "count": 25,
+      "total_windows": 598,
+      "support": 0.04180602006688963
+    },
+    {
+      "events": [
+        "follow_up_review",
+        "probation_confirmation"
+      ],
+      "length": 2,
+      "count": 23,
+      "total_windows": 598,
+      "support": 0.038461538461538464
+    },
+    {
+      "events": [
+        "probation_extension",
+        "follow_up_review"
+      ],
+      "length": 2,
+      "count": 23,
+      "total_windows": 598,
+      "support": 0.038461538461538464
+    },
+    {
+      "events": [
+        "probation_review",
+        "probation_extension"
+      ],
+      "length": 2,
+      "count": 23,
+      "total_windows": 598,
+      "support": 0.038461538461538464
+    },
+    {
+      "events": [
+        "mandatory_training",
+        "mentor_assignment",
+        "role_training"
+      ],
+      "length": 3,
+      "count": 19,
+      "total_windows": 550,
+      "support": 0.034545454545454546
+    },
+    {
+      "events": [
+        "orientation",
+        "mandatory_training",
+        "mentor_assignment"
+      ],
+      "length": 3,
+      "count": 19,
+      "total_windows": 550,
+      "support": 0.034545454545454546
+    },
+    {
+      "events": [
+        "mandatory_training",
+        "mentor_assignment"
+      ],
+      "length": 2,
+      "count": 19,
+      "total_windows": 598,
+      "support": 0.03177257525083612
+    },
+    {
+      "events": [
+        "mentor_assignment",
+        "role_training"
+      ],
+      "length": 2,
+      "count": 19,
+      "total_windows": 598,
+      "support": 0.03177257525083612
+    },
+    {
+      "events": [
+        "project_assignment",
+        "skills_training",
+        "probation_review"
+      ],
+      "length": 3,
+      "count": 17,
+      "total_windows": 550,
+      "support": 0.03090909090909091
+    },
+    {
+      "events": [
+        "role_training",
+        "project_assignment",
+        "skills_training"
+      ],
+      "length": 3,
+      "count": 17,
+      "total_windows": 550,
+      "support": 0.03090909090909091
+    },
+    {
+      "events": [
+        "skills_training",
+        "probation_review",
+        "probation_confirmation"
+      ],
+      "length": 3,
+      "count": 17,
+      "total_windows": 550,
+      "support": 0.03090909090909091
+    }
+  ]
+}
