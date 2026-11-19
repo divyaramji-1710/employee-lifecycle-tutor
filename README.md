@@ -1,52 +1,372 @@
-# Employee Lifecycle Tutor
+\# Employee Lifecycle Tutor
 
-[![Built with askThili](https://ask.thili.ai/api/v1/public/projects/uk2jg77mp7/badge.svg)](https://ask.thili.ai/b/uk2jg77mp7)
 
-The Employee Lifecycle Tutor is an interactive tool designed for new HR personnel. It explains common employee lifecycle event sequences and predicts likely next steps. This is achieved by applying frequent itemset mining and language model continued pretraining to anonymized HR event data.
 
-## What you are building
+A command-line learning tool that predicts the next event in a synthetic
 
-**Goal.** You will have built an interactive tutor that explains common employee lifecycle event sequences and predicts likely next steps for new HR personnel.
+employee history using a locally fine-tuned distilgpt2 language model.
 
-**Done when.** The interactive tutor is functional, can explain common HR event sequences, and accurately predicts likely next steps based on the trained language model.
 
-## Milestones
 
-Tick these off as you go, and commit after each one.
+Predictions come from the trained model. Explanations are separately
 
-- [ ] **1. Represent HR events (hiring, training, promotion) as ordered sequences.**  
-      Hint: Prepare your HR event data as ordered sequences for analysis.
-- [ ] **2. Mine frequent HR event sequences using `thilimarketbasket`.**  
-      Hint: Use `lfretail-lfmarketbasket` to find common event sequences.
-- [ ] **3. Train an LM to predict the next likely HR event in a sequence.**  
-      Hint: Apply language model continued pretraining to predict subsequent events.
-- [ ] **4. Design a text-based interactive tutor that queries the LM for explanations or next steps.**  
-      Hint: Develop a text-based interface to interact with your trained language model.
-- [ ] **5. Evaluate the tutor's ability to accurately guide users through HR processes.**  
-      Hint: Design a method to assess how well the tutor guides users through HR processes.
+labelled, written educational notes.
 
-## Run it
 
-You need Python 3.12 and git.
 
-```bash
-python3.12 -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-cp .env.example .env        # then choose a model; see the comments inside
-python -m app.cli hello
-pytest
+This is a learning prototype, not company policy or employment advice.
+
+
+
+\## Features
+
+
+
+\- Generate 72 unique, ordered synthetic employee histories.
+
+\- Mine frequent contiguous event sequences using thilimarketbasket.
+
+\- Continue language-model training on ordered event tokens.
+
+\- Suggest next events through an interactive command-line tutor.
+
+\- Compare predictions against popularity and last-event counting baselines.
+
+
+
+\## Setup
+
+
+
+Requires Python 3.12 and Git. No GPU, API key, or Ollama is required.
+
+Internet access is needed to install dependencies and download distilgpt2.
+
+
+
+From the project folder, run in Windows PowerShell:
+
+
+
+```powershell
+
+py -3.12 -m venv .venv
+
+.\\.venv\\Scripts\\python.exe -m pip install -r requirements.txt
+
 ```
 
-Your work goes in `app/core.py` (one stub per milestone) and `tests/test_core.py`. The first tests pass already; they
-check the plumbing.
 
-## Settings and secrets
 
-Model settings live in `.env`, which is ignored by git. **Never commit `.env` or paste a key into code.** If a key ever
-reaches GitHub, treat it as leaked and make a new one.
+\## Reproduce the project
 
-## Stretch ideas
 
-- Allow the tutor to provide more detailed explanations for each event, beyond just the next step.
-- Integrate a feedback mechanism for users to rate the tutor's helpfulness and accuracy.
-- Expand the tutor to cover edge cases or less common HR event sequences, providing guidance for unusual paths.
+
+Generate the dataset:
+
+
+
+```powershell
+
+.\\.venv\\Scripts\\python.exe -c "from app.core import milestone\_1; milestone\_1()"
+
+```
+
+
+
+Mine training sequences:
+
+
+
+```powershell
+
+.\\.venv\\Scripts\\python.exe -c "from app.core import milestone\_2; milestone\_2()"
+
+```
+
+
+
+Train the language model:
+
+
+
+```powershell
+
+.\\.venv\\Scripts\\python.exe -u -c "from app.core import milestone\_3; milestone\_3()"
+
+```
+
+
+
+The default run trains for 200 optimizer steps with batch size 8 and
+
+learning rate 0.0001. The recorded run took about 8 minutes 16 seconds,
+
+excluding initial loading and final model saving. Runtime varies by machine.
+
+
+
+Training saves model weights, tokenizer, and a training report in
+
+artifacts/hr-model. Generated data and model artifacts are excluded from Git.
+
+The dataset generator recreates the data; train locally before prediction.
+
+
+
+\## Use the tutor
+
+
+
+Start an interactive session:
+
+
+
+```powershell
+
+.\\.venv\\Scripts\\python.exe -m app.cli interactive
+
+```
+
+
+
+At the History> prompt, enter:
+
+
+
+```text
+
+hire
+
+hire,orientation,mandatory\_training
+
+explain probation\_review
+
+quit
+
+```
+
+
+
+Other commands:
+
+
+
+```powershell
+
+.\\.venv\\Scripts\\python.exe -m app.cli events
+
+.\\.venv\\Scripts\\python.exe -m app.cli explain probation\_review
+
+.\\.venv\\Scripts\\python.exe -m app.cli predict "hire,orientation"
+
+```
+
+
+
+Event names must match the vocabulary. Input order and repeated events
+
+are preserved. Unknown events are rejected.
+
+
+
+The tutor displays the unrestricted model prediction and ranked suggestions
+
+among the 24 known events plus end\_of\_history. Conditional suggestion scores
+
+are not calibrated confidence. Written notes are not generated by the LM.
+
+
+
+\## Evaluate
+
+
+
+```powershell
+
+.\\.venv\\Scripts\\python.exe -u -c "from app.core import milestone\_5; milestone\_5(split='validation')"
+
+.\\.venv\\Scripts\\python.exe -u -c "from app.core import milestone\_5; milestone\_5(split='test')"
+
+```
+
+
+
+Each non-empty history prefix creates one next-event case. Complete
+
+histories also create an end-of-history prediction case.
+
+
+
+Accuracy checks unrestricted LM output. MRR and hits@3 rank the 24 events
+
+plus end-of-history, with ties counted against the target. Counting baselines
+
+are fitted using training histories only.
+
+
+
+\## Recorded results
+
+
+
+Dataset: 48 training, 12 validation, and 12 test histories.
+
+All 72 complete histories are unique. The event vocabulary contains 24 events.
+
+
+
+Validation loss decreased from 9.5376 to 0.6132 after 200 training steps.
+
+
+
+\### Validation: 167 prefix cases
+
+
+
+| Method | Accuracy | MRR | Hits@3 |
+
+| --- | --- | --- | --- |
+
+| Language model | 74.3% | 0.8384 | 92.8% |
+
+| Popularity | 9.0% | 0.2238 | 18.0% |
+
+| Last-event counts | 70.7% | 0.8204 | 93.4% |
+
+
+
+\### Test: 153 prefix cases
+
+
+
+| Method | Accuracy | MRR | Hits@3 |
+
+| --- | --- | --- | --- |
+
+| Language model | 66.7% | 0.8036 | 94.1% |
+
+| Popularity | 8.5% | 0.2193 | 18.3% |
+
+| Last-event counts | 73.9% | 0.8397 | 93.5% |
+
+
+
+The LM did not outperform last-event counting on test accuracy or MRR.
+
+Its slightly higher hits@3 does not establish a reliable overall advantage.
+
+
+
+Evaluation reports and the recorded training report are in reports/.
+
+New training runs write their training report under artifacts/hr-model.
+
+
+
+\## Sequence mining
+
+
+
+Ordinary itemsets ignore order. This project instead converts contiguous
+
+windows into position-labelled tokens such as 0:hire and 1:orientation,
+
+then uses thilimarketbasket's frequent-itemset miner.
+
+
+
+Only complete position-labelled windows are reported. This preserves order
+
+and repeated events, but mines contiguous patterns rather than arbitrary
+
+gapped subsequences.
+
+
+
+Support is the fraction of windows of the same length, not the fraction
+
+of employees. At 3% minimum support, the training data produced 21 frequent
+
+patterns of lengths two and three.
+
+
+
+\## Tests
+
+
+
+```powershell
+
+.\\.venv\\Scripts\\python.exe -m pytest -q
+
+```
+
+
+
+The suite checks dataset separation and reproducibility, event ordering,
+
+window support, repeated events, CLI behavior, input validation, written
+
+note coverage, and evaluation metrics. Tests do not download or train a model.
+
+
+
+\## Limitations
+
+
+
+\- Data is generated from a small set of synthetic scenario combinations.
+
+&#x20; It does not represent real employees or validate real HR practices.
+
+\- Complete histories are separated, but prefixes overlap across splits:
+
+&#x20; 126 of 167 validation cases and 106 of 153 test cases have prefixes
+
+&#x20; also present in training.
+
+\- Prefix cases within a history are correlated; these are only 12 held-out
+
+&#x20; histories per evaluation split, not hundreds of independent employees.
+
+\- Several next events can be reasonable at branching points, while the
+
+&#x20; recorded evaluation assigns one observed target per case.
+
+\- Prediction quality and written-note correctness are different questions.
+
+&#x20; The metrics measure next-event prediction, not the educational quality
+
+&#x20; or real-world correctness of the notes.
+
+\- The model can suggest implausible transitions or events outside the
+
+&#x20; synthetic scenarios. Review suggestions rather than acting on them.
+
+\- Suggestion scores are not calibrated confidence.
+
+\- Broader data, expert-reviewed explanations, and more independent
+
+&#x20; evaluation histories would be needed for practical use.
+
+
+
+\## Milestones
+
+
+
+1\. Represent HR events as ordered synthetic histories.
+
+2\. Mine frequent ordered contiguous patterns with thilimarketbasket.
+
+3\. Train a causal LM on event histories.
+
+4\. Build an interactive tutor with clearly labelled written notes.
+
+5\. Evaluate against training-only counting baselines.
+
+
+
+Built from the askThili starter and course approach with AI coding assistance.
+
