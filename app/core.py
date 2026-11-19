@@ -13,5 +13,6 @@ def milestone_4(events, model_dir="artifacts/hr-model"):
     from app.tutor import LifecycleTutor
     return LifecycleTutor(model_dir).predict(events)
 
-def milestone_5():
-    raise NotImplementedError("Milestone 5 is next.")
+def milestone_5(**kwargs):
+    from app.evaluation import evaluate
+    return evaluate(**kwargs)

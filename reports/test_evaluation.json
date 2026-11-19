@@ -1,0 +1,2927 @@
+{
+  "split": "test",
+  "histories": 12,
+  "prefix_cases": 153,
+  "unique_prefixes": 90,
+  "prefixes_also_in_training": 106,
+  "ranking_candidates": 25,
+  "note": "LM accuracy uses unrestricted output. MRR and hits@3 rank the 24 events plus end-of-history, with pessimistic ties. Prefixes from the same history are correlated.",
+  "metrics": {
+    "LM": {
+      "accuracy": 0.6666666666666666,
+      "MRR": 0.8036025521319639,
+      "hits_at_3": 0.9411764705882353
+    },
+    "Popularity": {
+      "accuracy": 0.08496732026143791,
+      "MRR": 0.21932497422693503,
+      "hits_at_3": 0.1830065359477124
+    },
+    "Last-event counts": {
+      "accuracy": 0.738562091503268,
+      "MRR": 0.8396514161220043,
+      "hits_at_3": 0.934640522875817
+    }
+  },
+  "predictions": [
+    {
+      "history_id": "synthetic-005",
+      "prefix": [
+        "hire"
+      ],
+      "target": "orientation",
+      "prediction": "orientation",
+      "top_3": [
+        "orientation",
+        "mandatory_training",
+        "mentor_assignment"
+      ]
+    },
+    {
+      "history_id": "synthetic-005",
+      "prefix": [
+        "hire",
+        "orientation"
+      ],
+      "target": "mandatory_training",
+      "prediction": "mandatory_training",
+      "top_3": [
+        "mandatory_training",
+        "mentor_assignment",
+        "orientation"
+      ]
+    },
+    {
+      "history_id": "synthetic-005",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training"
+      ],
+      "target": "role_training",
+      "prediction": "mentor_assignment",
+      "top_3": [
+        "mentor_assignment",
+        "role_training",
+        "mandatory_training"
+      ]
+    },
+    {
+      "history_id": "synthetic-005",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training"
+      ],
+      "target": "probation_review",
+      "prediction": "project_assignment",
+      "top_3": [
+        "project_assignment",
+        "probation_review",
+        "skills_training"
+      ]
+    },
+    {
+      "history_id": "synthetic-005",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "probation_review"
+      ],
+      "target": "probation_extension",
+      "prediction": "probation_confirmation",
+      "top_3": [
+        "probation_confirmation",
+        "probation_extension",
+        "probation_review"
+      ]
+    },
+    {
+      "history_id": "synthetic-005",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "probation_review",
+        "probation_extension"
+      ],
+      "target": "follow_up_review",
+      "prediction": "follow_up_review",
+      "top_3": [
+        "follow_up_review",
+        "probation_confirmation",
+        "probation_extension"
+      ]
+    },
+    {
+      "history_id": "synthetic-005",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "probation_review",
+        "probation_extension",
+        "follow_up_review"
+      ],
+      "target": "probation_confirmation",
+      "prediction": "probation_confirmation",
+      "top_3": [
+        "probation_confirmation",
+        "probation_extension",
+        "probation_review"
+      ]
+    },
+    {
+      "history_id": "synthetic-005",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "probation_review",
+        "probation_extension",
+        "follow_up_review",
+        "probation_confirmation"
+      ],
+      "target": "performance_review",
+      "prediction": "performance_review",
+      "top_3": [
+        "performance_review",
+        "skills_training",
+        "notice_period"
+      ]
+    },
+    {
+      "history_id": "synthetic-005",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "probation_review",
+        "probation_extension",
+        "follow_up_review",
+        "probation_confirmation",
+        "performance_review"
+      ],
+      "target": "promotion_review",
+      "prediction": "development_plan",
+      "top_3": [
+        "development_plan",
+        "transfer_request",
+        "resignation"
+      ]
+    },
+    {
+      "history_id": "synthetic-005",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "probation_review",
+        "probation_extension",
+        "follow_up_review",
+        "probation_confirmation",
+        "performance_review",
+        "promotion_review"
+      ],
+      "target": "promotion",
+      "prediction": "skills_training",
+      "top_3": [
+        "skills_training",
+        "transfer_review",
+        "promotion"
+      ]
+    },
+    {
+      "history_id": "synthetic-005",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "probation_review",
+        "probation_extension",
+        "follow_up_review",
+        "probation_confirmation",
+        "performance_review",
+        "promotion_review",
+        "promotion"
+      ],
+      "target": "leadership_training",
+      "prediction": "transfer_review",
+      "top_3": [
+        "transfer_review",
+        "internal_transfer",
+        "skills_training"
+      ]
+    },
+    {
+      "history_id": "synthetic-005",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "probation_review",
+        "probation_extension",
+        "follow_up_review",
+        "probation_confirmation",
+        "performance_review",
+        "promotion_review",
+        "promotion",
+        "leadership_training"
+      ],
+      "target": "end_of_history",
+      "prediction": "end_of_history",
+      "top_3": [
+        "end_of_history",
+        "development_plan",
+        "exit_interview"
+      ]
+    },
+    {
+      "history_id": "synthetic-001",
+      "prefix": [
+        "hire"
+      ],
+      "target": "orientation",
+      "prediction": "orientation",
+      "top_3": [
+        "orientation",
+        "mandatory_training",
+        "mentor_assignment"
+      ]
+    },
+    {
+      "history_id": "synthetic-001",
+      "prefix": [
+        "hire",
+        "orientation"
+      ],
+      "target": "mandatory_training",
+      "prediction": "mandatory_training",
+      "top_3": [
+        "mandatory_training",
+        "mentor_assignment",
+        "orientation"
+      ]
+    },
+    {
+      "history_id": "synthetic-001",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training"
+      ],
+      "target": "role_training",
+      "prediction": "mentor_assignment",
+      "top_3": [
+        "mentor_assignment",
+        "role_training",
+        "mandatory_training"
+      ]
+    },
+    {
+      "history_id": "synthetic-001",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training"
+      ],
+      "target": "probation_review",
+      "prediction": "project_assignment",
+      "top_3": [
+        "project_assignment",
+        "probation_review",
+        "skills_training"
+      ]
+    },
+    {
+      "history_id": "synthetic-001",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "probation_review"
+      ],
+      "target": "probation_confirmation",
+      "prediction": "probation_confirmation",
+      "top_3": [
+        "probation_confirmation",
+        "probation_extension",
+        "probation_review"
+      ]
+    },
+    {
+      "history_id": "synthetic-001",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "probation_review",
+        "probation_confirmation"
+      ],
+      "target": "performance_review",
+      "prediction": "performance_review",
+      "top_3": [
+        "performance_review",
+        "skills_training",
+        "probation_review"
+      ]
+    },
+    {
+      "history_id": "synthetic-001",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "probation_review",
+        "probation_confirmation",
+        "performance_review"
+      ],
+      "target": "promotion_review",
+      "prediction": "development_plan",
+      "top_3": [
+        "development_plan",
+        "transfer_request",
+        "resignation"
+      ]
+    },
+    {
+      "history_id": "synthetic-001",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "probation_review",
+        "probation_confirmation",
+        "performance_review",
+        "promotion_review"
+      ],
+      "target": "promotion",
+      "prediction": "promotion",
+      "top_3": [
+        "promotion",
+        "transfer_review",
+        "transfer_request"
+      ]
+    },
+    {
+      "history_id": "synthetic-001",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "probation_review",
+        "probation_confirmation",
+        "performance_review",
+        "promotion_review",
+        "promotion"
+      ],
+      "target": "leadership_training",
+      "prediction": "transfer_review",
+      "top_3": [
+        "transfer_review",
+        "internal_transfer",
+        "skills_training"
+      ]
+    },
+    {
+      "history_id": "synthetic-001",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "probation_review",
+        "probation_confirmation",
+        "performance_review",
+        "promotion_review",
+        "promotion",
+        "leadership_training"
+      ],
+      "target": "end_of_history",
+      "prediction": "end_of_history",
+      "top_3": [
+        "end_of_history",
+        "development_plan",
+        "exit_interview"
+      ]
+    },
+    {
+      "history_id": "synthetic-002",
+      "prefix": [
+        "hire"
+      ],
+      "target": "orientation",
+      "prediction": "orientation",
+      "top_3": [
+        "orientation",
+        "mandatory_training",
+        "mentor_assignment"
+      ]
+    },
+    {
+      "history_id": "synthetic-002",
+      "prefix": [
+        "hire",
+        "orientation"
+      ],
+      "target": "mandatory_training",
+      "prediction": "mandatory_training",
+      "top_3": [
+        "mandatory_training",
+        "mentor_assignment",
+        "orientation"
+      ]
+    },
+    {
+      "history_id": "synthetic-002",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training"
+      ],
+      "target": "role_training",
+      "prediction": "mentor_assignment",
+      "top_3": [
+        "mentor_assignment",
+        "role_training",
+        "mandatory_training"
+      ]
+    },
+    {
+      "history_id": "synthetic-002",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training"
+      ],
+      "target": "probation_review",
+      "prediction": "project_assignment",
+      "top_3": [
+        "project_assignment",
+        "probation_review",
+        "skills_training"
+      ]
+    },
+    {
+      "history_id": "synthetic-002",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "probation_review"
+      ],
+      "target": "probation_confirmation",
+      "prediction": "probation_confirmation",
+      "top_3": [
+        "probation_confirmation",
+        "probation_extension",
+        "probation_review"
+      ]
+    },
+    {
+      "history_id": "synthetic-002",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "probation_review",
+        "probation_confirmation"
+      ],
+      "target": "performance_review",
+      "prediction": "performance_review",
+      "top_3": [
+        "performance_review",
+        "skills_training",
+        "probation_review"
+      ]
+    },
+    {
+      "history_id": "synthetic-002",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "probation_review",
+        "probation_confirmation",
+        "performance_review"
+      ],
+      "target": "transfer_request",
+      "prediction": "development_plan",
+      "top_3": [
+        "development_plan",
+        "transfer_request",
+        "resignation"
+      ]
+    },
+    {
+      "history_id": "synthetic-002",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "probation_review",
+        "probation_confirmation",
+        "performance_review",
+        "transfer_request"
+      ],
+      "target": "transfer_review",
+      "prediction": "transfer_review",
+      "top_3": [
+        "transfer_review",
+        "internal_transfer",
+        "notice_period"
+      ]
+    },
+    {
+      "history_id": "synthetic-002",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "probation_review",
+        "probation_confirmation",
+        "performance_review",
+        "transfer_request",
+        "transfer_review"
+      ],
+      "target": "internal_transfer",
+      "prediction": "role_training",
+      "top_3": [
+        "role_training",
+        "internal_transfer",
+        "transfer_review"
+      ]
+    },
+    {
+      "history_id": "synthetic-002",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "probation_review",
+        "probation_confirmation",
+        "performance_review",
+        "transfer_request",
+        "transfer_review",
+        "internal_transfer"
+      ],
+      "target": "role_training",
+      "prediction": "role_training",
+      "top_3": [
+        "role_training",
+        "internal_transfer",
+        "transfer_review"
+      ]
+    },
+    {
+      "history_id": "synthetic-002",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "probation_review",
+        "probation_confirmation",
+        "performance_review",
+        "transfer_request",
+        "transfer_review",
+        "internal_transfer",
+        "role_training"
+      ],
+      "target": "end_of_history",
+      "prediction": "end_of_history",
+      "top_3": [
+        "end_of_history",
+        "exit_interview",
+        "development_plan"
+      ]
+    },
+    {
+      "history_id": "synthetic-054",
+      "prefix": [
+        "hire"
+      ],
+      "target": "orientation",
+      "prediction": "orientation",
+      "top_3": [
+        "orientation",
+        "mandatory_training",
+        "mentor_assignment"
+      ]
+    },
+    {
+      "history_id": "synthetic-054",
+      "prefix": [
+        "hire",
+        "orientation"
+      ],
+      "target": "mandatory_training",
+      "prediction": "mandatory_training",
+      "top_3": [
+        "mandatory_training",
+        "mentor_assignment",
+        "orientation"
+      ]
+    },
+    {
+      "history_id": "synthetic-054",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training"
+      ],
+      "target": "mentor_assignment",
+      "prediction": "mentor_assignment",
+      "top_3": [
+        "mentor_assignment",
+        "role_training",
+        "mandatory_training"
+      ]
+    },
+    {
+      "history_id": "synthetic-054",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "mentor_assignment"
+      ],
+      "target": "role_training",
+      "prediction": "role_training",
+      "top_3": [
+        "role_training",
+        "mandatory_training",
+        "mentor_assignment"
+      ]
+    },
+    {
+      "history_id": "synthetic-054",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "mentor_assignment",
+        "role_training"
+      ],
+      "target": "probation_review",
+      "prediction": "project_assignment",
+      "top_3": [
+        "project_assignment",
+        "probation_review",
+        "skills_training"
+      ]
+    },
+    {
+      "history_id": "synthetic-054",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "mentor_assignment",
+        "role_training",
+        "probation_review"
+      ],
+      "target": "probation_extension",
+      "prediction": "probation_confirmation",
+      "top_3": [
+        "probation_confirmation",
+        "probation_extension",
+        "probation_review"
+      ]
+    },
+    {
+      "history_id": "synthetic-054",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "mentor_assignment",
+        "role_training",
+        "probation_review",
+        "probation_extension"
+      ],
+      "target": "follow_up_review",
+      "prediction": "follow_up_review",
+      "top_3": [
+        "follow_up_review",
+        "probation_confirmation",
+        "probation_extension"
+      ]
+    },
+    {
+      "history_id": "synthetic-054",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "mentor_assignment",
+        "role_training",
+        "probation_review",
+        "probation_extension",
+        "follow_up_review"
+      ],
+      "target": "probation_confirmation",
+      "prediction": "probation_confirmation",
+      "top_3": [
+        "probation_confirmation",
+        "probation_extension",
+        "handover"
+      ]
+    },
+    {
+      "history_id": "synthetic-054",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "mentor_assignment",
+        "role_training",
+        "probation_review",
+        "probation_extension",
+        "follow_up_review",
+        "probation_confirmation"
+      ],
+      "target": "performance_review",
+      "prediction": "performance_review",
+      "top_3": [
+        "performance_review",
+        "skills_training",
+        "notice_period"
+      ]
+    },
+    {
+      "history_id": "synthetic-054",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "mentor_assignment",
+        "role_training",
+        "probation_review",
+        "probation_extension",
+        "follow_up_review",
+        "probation_confirmation",
+        "performance_review"
+      ],
+      "target": "transfer_request",
+      "prediction": "development_plan",
+      "top_3": [
+        "development_plan",
+        "transfer_request",
+        "resignation"
+      ]
+    },
+    {
+      "history_id": "synthetic-054",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "mentor_assignment",
+        "role_training",
+        "probation_review",
+        "probation_extension",
+        "follow_up_review",
+        "probation_confirmation",
+        "performance_review",
+        "transfer_request"
+      ],
+      "target": "transfer_review",
+      "prediction": "transfer_review",
+      "top_3": [
+        "transfer_review",
+        "notice_period",
+        "internal_transfer"
+      ]
+    },
+    {
+      "history_id": "synthetic-054",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "mentor_assignment",
+        "role_training",
+        "probation_review",
+        "probation_extension",
+        "follow_up_review",
+        "probation_confirmation",
+        "performance_review",
+        "transfer_request",
+        "transfer_review"
+      ],
+      "target": "internal_transfer",
+      "prediction": "internal_transfer",
+      "top_3": [
+        "internal_transfer",
+        "transfer_review",
+        "role_training"
+      ]
+    },
+    {
+      "history_id": "synthetic-054",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "mentor_assignment",
+        "role_training",
+        "probation_review",
+        "probation_extension",
+        "follow_up_review",
+        "probation_confirmation",
+        "performance_review",
+        "transfer_request",
+        "transfer_review",
+        "internal_transfer"
+      ],
+      "target": "role_training",
+      "prediction": "role_training",
+      "top_3": [
+        "role_training",
+        "internal_transfer",
+        "transfer_review"
+      ]
+    },
+    {
+      "history_id": "synthetic-054",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "mentor_assignment",
+        "role_training",
+        "probation_review",
+        "probation_extension",
+        "follow_up_review",
+        "probation_confirmation",
+        "performance_review",
+        "transfer_request",
+        "transfer_review",
+        "internal_transfer",
+        "role_training"
+      ],
+      "target": "end_of_history",
+      "prediction": "end_of_history",
+      "top_3": [
+        "end_of_history",
+        "exit_interview",
+        "development_plan"
+      ]
+    },
+    {
+      "history_id": "synthetic-011",
+      "prefix": [
+        "hire"
+      ],
+      "target": "orientation",
+      "prediction": "orientation",
+      "top_3": [
+        "orientation",
+        "mandatory_training",
+        "mentor_assignment"
+      ]
+    },
+    {
+      "history_id": "synthetic-011",
+      "prefix": [
+        "hire",
+        "orientation"
+      ],
+      "target": "mandatory_training",
+      "prediction": "mandatory_training",
+      "top_3": [
+        "mandatory_training",
+        "mentor_assignment",
+        "orientation"
+      ]
+    },
+    {
+      "history_id": "synthetic-011",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training"
+      ],
+      "target": "role_training",
+      "prediction": "mentor_assignment",
+      "top_3": [
+        "mentor_assignment",
+        "role_training",
+        "mandatory_training"
+      ]
+    },
+    {
+      "history_id": "synthetic-011",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training"
+      ],
+      "target": "skills_training",
+      "prediction": "project_assignment",
+      "top_3": [
+        "project_assignment",
+        "probation_review",
+        "skills_training"
+      ]
+    },
+    {
+      "history_id": "synthetic-011",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "skills_training"
+      ],
+      "target": "probation_review",
+      "prediction": "probation_review",
+      "top_3": [
+        "probation_review",
+        "skills_training",
+        "project_assignment"
+      ]
+    },
+    {
+      "history_id": "synthetic-011",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "skills_training",
+        "probation_review"
+      ],
+      "target": "probation_confirmation",
+      "prediction": "probation_confirmation",
+      "top_3": [
+        "probation_confirmation",
+        "probation_extension",
+        "probation_review"
+      ]
+    },
+    {
+      "history_id": "synthetic-011",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "skills_training",
+        "probation_review",
+        "probation_confirmation"
+      ],
+      "target": "performance_review",
+      "prediction": "performance_review",
+      "top_3": [
+        "performance_review",
+        "skills_training",
+        "notice_period"
+      ]
+    },
+    {
+      "history_id": "synthetic-011",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "skills_training",
+        "probation_review",
+        "probation_confirmation",
+        "performance_review"
+      ],
+      "target": "resignation",
+      "prediction": "development_plan",
+      "top_3": [
+        "development_plan",
+        "transfer_request",
+        "resignation"
+      ]
+    },
+    {
+      "history_id": "synthetic-011",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "skills_training",
+        "probation_review",
+        "probation_confirmation",
+        "performance_review",
+        "resignation"
+      ],
+      "target": "notice_period",
+      "prediction": "notice_period",
+      "top_3": [
+        "notice_period",
+        "transfer_review",
+        "handover"
+      ]
+    },
+    {
+      "history_id": "synthetic-011",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "skills_training",
+        "probation_review",
+        "probation_confirmation",
+        "performance_review",
+        "resignation",
+        "notice_period"
+      ],
+      "target": "handover",
+      "prediction": "handover",
+      "top_3": [
+        "handover",
+        "notice_period",
+        "transfer_review"
+      ]
+    },
+    {
+      "history_id": "synthetic-011",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "skills_training",
+        "probation_review",
+        "probation_confirmation",
+        "performance_review",
+        "resignation",
+        "notice_period",
+        "handover"
+      ],
+      "target": "exit_interview",
+      "prediction": "exit_interview",
+      "top_3": [
+        "exit_interview",
+        "role_training",
+        "employment_end"
+      ]
+    },
+    {
+      "history_id": "synthetic-011",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "skills_training",
+        "probation_review",
+        "probation_confirmation",
+        "performance_review",
+        "resignation",
+        "notice_period",
+        "handover",
+        "exit_interview"
+      ],
+      "target": "employment_end",
+      "prediction": "role_training",
+      "top_3": [
+        "role_training",
+        "employment_end",
+        "handover"
+      ]
+    },
+    {
+      "history_id": "synthetic-011",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "skills_training",
+        "probation_review",
+        "probation_confirmation",
+        "performance_review",
+        "resignation",
+        "notice_period",
+        "handover",
+        "exit_interview",
+        "employment_end"
+      ],
+      "target": "end_of_history",
+      "prediction": "end_of_history",
+      "top_3": [
+        "end_of_history",
+        "exit_interview",
+        "development_plan"
+      ]
+    },
+    {
+      "history_id": "synthetic-013",
+      "prefix": [
+        "hire"
+      ],
+      "target": "orientation",
+      "prediction": "orientation",
+      "top_3": [
+        "orientation",
+        "mandatory_training",
+        "mentor_assignment"
+      ]
+    },
+    {
+      "history_id": "synthetic-013",
+      "prefix": [
+        "hire",
+        "orientation"
+      ],
+      "target": "mandatory_training",
+      "prediction": "mandatory_training",
+      "top_3": [
+        "mandatory_training",
+        "mentor_assignment",
+        "orientation"
+      ]
+    },
+    {
+      "history_id": "synthetic-013",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training"
+      ],
+      "target": "role_training",
+      "prediction": "mentor_assignment",
+      "top_3": [
+        "mentor_assignment",
+        "role_training",
+        "mandatory_training"
+      ]
+    },
+    {
+      "history_id": "synthetic-013",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training"
+      ],
+      "target": "skills_training",
+      "prediction": "project_assignment",
+      "top_3": [
+        "project_assignment",
+        "probation_review",
+        "skills_training"
+      ]
+    },
+    {
+      "history_id": "synthetic-013",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "skills_training"
+      ],
+      "target": "probation_review",
+      "prediction": "probation_review",
+      "top_3": [
+        "probation_review",
+        "skills_training",
+        "project_assignment"
+      ]
+    },
+    {
+      "history_id": "synthetic-013",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "skills_training",
+        "probation_review"
+      ],
+      "target": "probation_extension",
+      "prediction": "probation_confirmation",
+      "top_3": [
+        "probation_confirmation",
+        "probation_extension",
+        "probation_review"
+      ]
+    },
+    {
+      "history_id": "synthetic-013",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "skills_training",
+        "probation_review",
+        "probation_extension"
+      ],
+      "target": "follow_up_review",
+      "prediction": "follow_up_review",
+      "top_3": [
+        "follow_up_review",
+        "probation_confirmation",
+        "probation_extension"
+      ]
+    },
+    {
+      "history_id": "synthetic-013",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "skills_training",
+        "probation_review",
+        "probation_extension",
+        "follow_up_review"
+      ],
+      "target": "probation_confirmation",
+      "prediction": "probation_confirmation",
+      "top_3": [
+        "probation_confirmation",
+        "probation_extension",
+        "handover"
+      ]
+    },
+    {
+      "history_id": "synthetic-013",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "skills_training",
+        "probation_review",
+        "probation_extension",
+        "follow_up_review",
+        "probation_confirmation"
+      ],
+      "target": "performance_review",
+      "prediction": "performance_review",
+      "top_3": [
+        "performance_review",
+        "skills_training",
+        "notice_period"
+      ]
+    },
+    {
+      "history_id": "synthetic-013",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "skills_training",
+        "probation_review",
+        "probation_extension",
+        "follow_up_review",
+        "probation_confirmation",
+        "performance_review"
+      ],
+      "target": "promotion_review",
+      "prediction": "development_plan",
+      "top_3": [
+        "development_plan",
+        "transfer_request",
+        "resignation"
+      ]
+    },
+    {
+      "history_id": "synthetic-013",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "skills_training",
+        "probation_review",
+        "probation_extension",
+        "follow_up_review",
+        "probation_confirmation",
+        "performance_review",
+        "promotion_review"
+      ],
+      "target": "promotion",
+      "prediction": "skills_training",
+      "top_3": [
+        "skills_training",
+        "transfer_review",
+        "promotion"
+      ]
+    },
+    {
+      "history_id": "synthetic-013",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "skills_training",
+        "probation_review",
+        "probation_extension",
+        "follow_up_review",
+        "probation_confirmation",
+        "performance_review",
+        "promotion_review",
+        "promotion"
+      ],
+      "target": "leadership_training",
+      "prediction": "transfer_review",
+      "top_3": [
+        "transfer_review",
+        "internal_transfer",
+        "skills_training"
+      ]
+    },
+    {
+      "history_id": "synthetic-013",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "skills_training",
+        "probation_review",
+        "probation_extension",
+        "follow_up_review",
+        "probation_confirmation",
+        "performance_review",
+        "promotion_review",
+        "promotion",
+        "leadership_training"
+      ],
+      "target": "end_of_history",
+      "prediction": "end_of_history",
+      "top_3": [
+        "end_of_history",
+        "development_plan",
+        "skills_training"
+      ]
+    },
+    {
+      "history_id": "synthetic-017",
+      "prefix": [
+        "hire"
+      ],
+      "target": "orientation",
+      "prediction": "orientation",
+      "top_3": [
+        "orientation",
+        "mandatory_training",
+        "mentor_assignment"
+      ]
+    },
+    {
+      "history_id": "synthetic-017",
+      "prefix": [
+        "hire",
+        "orientation"
+      ],
+      "target": "mandatory_training",
+      "prediction": "mandatory_training",
+      "top_3": [
+        "mandatory_training",
+        "mentor_assignment",
+        "orientation"
+      ]
+    },
+    {
+      "history_id": "synthetic-017",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training"
+      ],
+      "target": "role_training",
+      "prediction": "mentor_assignment",
+      "top_3": [
+        "mentor_assignment",
+        "role_training",
+        "mandatory_training"
+      ]
+    },
+    {
+      "history_id": "synthetic-017",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training"
+      ],
+      "target": "project_assignment",
+      "prediction": "project_assignment",
+      "top_3": [
+        "project_assignment",
+        "probation_review",
+        "skills_training"
+      ]
+    },
+    {
+      "history_id": "synthetic-017",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "project_assignment"
+      ],
+      "target": "skills_training",
+      "prediction": "skills_training",
+      "top_3": [
+        "skills_training",
+        "probation_review",
+        "project_assignment"
+      ]
+    },
+    {
+      "history_id": "synthetic-017",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "project_assignment",
+        "skills_training"
+      ],
+      "target": "probation_review",
+      "prediction": "probation_review",
+      "top_3": [
+        "probation_review",
+        "skills_training",
+        "project_assignment"
+      ]
+    },
+    {
+      "history_id": "synthetic-017",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "project_assignment",
+        "skills_training",
+        "probation_review"
+      ],
+      "target": "probation_confirmation",
+      "prediction": "probation_confirmation",
+      "top_3": [
+        "probation_confirmation",
+        "probation_extension",
+        "probation_review"
+      ]
+    },
+    {
+      "history_id": "synthetic-017",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "project_assignment",
+        "skills_training",
+        "probation_review",
+        "probation_confirmation"
+      ],
+      "target": "performance_review",
+      "prediction": "performance_review",
+      "top_3": [
+        "performance_review",
+        "skills_training",
+        "notice_period"
+      ]
+    },
+    {
+      "history_id": "synthetic-017",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "project_assignment",
+        "skills_training",
+        "probation_review",
+        "probation_confirmation",
+        "performance_review"
+      ],
+      "target": "promotion_review",
+      "prediction": "development_plan",
+      "top_3": [
+        "development_plan",
+        "transfer_request",
+        "resignation"
+      ]
+    },
+    {
+      "history_id": "synthetic-017",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "project_assignment",
+        "skills_training",
+        "probation_review",
+        "probation_confirmation",
+        "performance_review",
+        "promotion_review"
+      ],
+      "target": "promotion",
+      "prediction": "skills_training",
+      "top_3": [
+        "skills_training",
+        "transfer_review",
+        "transfer_request"
+      ]
+    },
+    {
+      "history_id": "synthetic-017",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "project_assignment",
+        "skills_training",
+        "probation_review",
+        "probation_confirmation",
+        "performance_review",
+        "promotion_review",
+        "promotion"
+      ],
+      "target": "leadership_training",
+      "prediction": "transfer_review",
+      "top_3": [
+        "transfer_review",
+        "internal_transfer",
+        "skills_training"
+      ]
+    },
+    {
+      "history_id": "synthetic-017",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "project_assignment",
+        "skills_training",
+        "probation_review",
+        "probation_confirmation",
+        "performance_review",
+        "promotion_review",
+        "promotion",
+        "leadership_training"
+      ],
+      "target": "end_of_history",
+      "prediction": "end_of_history",
+      "top_3": [
+        "end_of_history",
+        "development_plan",
+        "exit_interview"
+      ]
+    },
+    {
+      "history_id": "synthetic-028",
+      "prefix": [
+        "hire"
+      ],
+      "target": "orientation",
+      "prediction": "orientation",
+      "top_3": [
+        "orientation",
+        "mandatory_training",
+        "mentor_assignment"
+      ]
+    },
+    {
+      "history_id": "synthetic-028",
+      "prefix": [
+        "hire",
+        "orientation"
+      ],
+      "target": "mentor_assignment",
+      "prediction": "mandatory_training",
+      "top_3": [
+        "mandatory_training",
+        "mentor_assignment",
+        "orientation"
+      ]
+    },
+    {
+      "history_id": "synthetic-028",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mentor_assignment"
+      ],
+      "target": "mandatory_training",
+      "prediction": "mandatory_training",
+      "top_3": [
+        "mandatory_training",
+        "orientation",
+        "mentor_assignment"
+      ]
+    },
+    {
+      "history_id": "synthetic-028",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mentor_assignment",
+        "mandatory_training"
+      ],
+      "target": "role_training",
+      "prediction": "role_training",
+      "top_3": [
+        "role_training",
+        "mentor_assignment",
+        "project_assignment"
+      ]
+    },
+    {
+      "history_id": "synthetic-028",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mentor_assignment",
+        "mandatory_training",
+        "role_training"
+      ],
+      "target": "probation_review",
+      "prediction": "project_assignment",
+      "top_3": [
+        "project_assignment",
+        "probation_review",
+        "skills_training"
+      ]
+    },
+    {
+      "history_id": "synthetic-028",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mentor_assignment",
+        "mandatory_training",
+        "role_training",
+        "probation_review"
+      ],
+      "target": "probation_extension",
+      "prediction": "probation_confirmation",
+      "top_3": [
+        "probation_confirmation",
+        "probation_extension",
+        "probation_review"
+      ]
+    },
+    {
+      "history_id": "synthetic-028",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mentor_assignment",
+        "mandatory_training",
+        "role_training",
+        "probation_review",
+        "probation_extension"
+      ],
+      "target": "follow_up_review",
+      "prediction": "follow_up_review",
+      "top_3": [
+        "follow_up_review",
+        "probation_confirmation",
+        "probation_extension"
+      ]
+    },
+    {
+      "history_id": "synthetic-028",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mentor_assignment",
+        "mandatory_training",
+        "role_training",
+        "probation_review",
+        "probation_extension",
+        "follow_up_review"
+      ],
+      "target": "probation_confirmation",
+      "prediction": "probation_confirmation",
+      "top_3": [
+        "probation_confirmation",
+        "probation_extension",
+        "handover"
+      ]
+    },
+    {
+      "history_id": "synthetic-028",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mentor_assignment",
+        "mandatory_training",
+        "role_training",
+        "probation_review",
+        "probation_extension",
+        "follow_up_review",
+        "probation_confirmation"
+      ],
+      "target": "performance_review",
+      "prediction": "performance_review",
+      "top_3": [
+        "performance_review",
+        "skills_training",
+        "notice_period"
+      ]
+    },
+    {
+      "history_id": "synthetic-028",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mentor_assignment",
+        "mandatory_training",
+        "role_training",
+        "probation_review",
+        "probation_extension",
+        "follow_up_review",
+        "probation_confirmation",
+        "performance_review"
+      ],
+      "target": "development_plan",
+      "prediction": "development_plan",
+      "top_3": [
+        "development_plan",
+        "transfer_request",
+        "resignation"
+      ]
+    },
+    {
+      "history_id": "synthetic-028",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mentor_assignment",
+        "mandatory_training",
+        "role_training",
+        "probation_review",
+        "probation_extension",
+        "follow_up_review",
+        "probation_confirmation",
+        "performance_review",
+        "development_plan"
+      ],
+      "target": "skills_training",
+      "prediction": "skills_training",
+      "top_3": [
+        "skills_training",
+        "performance_review",
+        "transfer_review"
+      ]
+    },
+    {
+      "history_id": "synthetic-028",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mentor_assignment",
+        "mandatory_training",
+        "role_training",
+        "probation_review",
+        "probation_extension",
+        "follow_up_review",
+        "probation_confirmation",
+        "performance_review",
+        "development_plan",
+        "skills_training"
+      ],
+      "target": "performance_review",
+      "prediction": "performance_review",
+      "top_3": [
+        "performance_review",
+        "skills_training",
+        "probation_review"
+      ]
+    },
+    {
+      "history_id": "synthetic-028",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mentor_assignment",
+        "mandatory_training",
+        "role_training",
+        "probation_review",
+        "probation_extension",
+        "follow_up_review",
+        "probation_confirmation",
+        "performance_review",
+        "development_plan",
+        "skills_training",
+        "performance_review"
+      ],
+      "target": "end_of_history",
+      "prediction": "end_of_history",
+      "top_3": [
+        "end_of_history",
+        "development_plan",
+        "skills_training"
+      ]
+    },
+    {
+      "history_id": "synthetic-031",
+      "prefix": [
+        "hire"
+      ],
+      "target": "orientation",
+      "prediction": "orientation",
+      "top_3": [
+        "orientation",
+        "mandatory_training",
+        "mentor_assignment"
+      ]
+    },
+    {
+      "history_id": "synthetic-031",
+      "prefix": [
+        "hire",
+        "orientation"
+      ],
+      "target": "mentor_assignment",
+      "prediction": "mandatory_training",
+      "top_3": [
+        "mandatory_training",
+        "mentor_assignment",
+        "orientation"
+      ]
+    },
+    {
+      "history_id": "synthetic-031",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mentor_assignment"
+      ],
+      "target": "mandatory_training",
+      "prediction": "mandatory_training",
+      "top_3": [
+        "mandatory_training",
+        "orientation",
+        "mentor_assignment"
+      ]
+    },
+    {
+      "history_id": "synthetic-031",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mentor_assignment",
+        "mandatory_training"
+      ],
+      "target": "role_training",
+      "prediction": "role_training",
+      "top_3": [
+        "role_training",
+        "mentor_assignment",
+        "project_assignment"
+      ]
+    },
+    {
+      "history_id": "synthetic-031",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mentor_assignment",
+        "mandatory_training",
+        "role_training"
+      ],
+      "target": "probation_review",
+      "prediction": "project_assignment",
+      "top_3": [
+        "project_assignment",
+        "probation_review",
+        "skills_training"
+      ]
+    },
+    {
+      "history_id": "synthetic-031",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mentor_assignment",
+        "mandatory_training",
+        "role_training",
+        "probation_review"
+      ],
+      "target": "probation_extension",
+      "prediction": "probation_confirmation",
+      "top_3": [
+        "probation_confirmation",
+        "probation_extension",
+        "probation_review"
+      ]
+    },
+    {
+      "history_id": "synthetic-031",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mentor_assignment",
+        "mandatory_training",
+        "role_training",
+        "probation_review",
+        "probation_extension"
+      ],
+      "target": "follow_up_review",
+      "prediction": "follow_up_review",
+      "top_3": [
+        "follow_up_review",
+        "probation_confirmation",
+        "probation_extension"
+      ]
+    },
+    {
+      "history_id": "synthetic-031",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mentor_assignment",
+        "mandatory_training",
+        "role_training",
+        "probation_review",
+        "probation_extension",
+        "follow_up_review"
+      ],
+      "target": "probation_confirmation",
+      "prediction": "probation_confirmation",
+      "top_3": [
+        "probation_confirmation",
+        "probation_extension",
+        "handover"
+      ]
+    },
+    {
+      "history_id": "synthetic-031",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mentor_assignment",
+        "mandatory_training",
+        "role_training",
+        "probation_review",
+        "probation_extension",
+        "follow_up_review",
+        "probation_confirmation"
+      ],
+      "target": "performance_review",
+      "prediction": "performance_review",
+      "top_3": [
+        "performance_review",
+        "skills_training",
+        "notice_period"
+      ]
+    },
+    {
+      "history_id": "synthetic-031",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mentor_assignment",
+        "mandatory_training",
+        "role_training",
+        "probation_review",
+        "probation_extension",
+        "follow_up_review",
+        "probation_confirmation",
+        "performance_review"
+      ],
+      "target": "resignation",
+      "prediction": "development_plan",
+      "top_3": [
+        "development_plan",
+        "transfer_request",
+        "resignation"
+      ]
+    },
+    {
+      "history_id": "synthetic-031",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mentor_assignment",
+        "mandatory_training",
+        "role_training",
+        "probation_review",
+        "probation_extension",
+        "follow_up_review",
+        "probation_confirmation",
+        "performance_review",
+        "resignation"
+      ],
+      "target": "notice_period",
+      "prediction": "notice_period",
+      "top_3": [
+        "notice_period",
+        "transfer_review",
+        "handover"
+      ]
+    },
+    {
+      "history_id": "synthetic-031",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mentor_assignment",
+        "mandatory_training",
+        "role_training",
+        "probation_review",
+        "probation_extension",
+        "follow_up_review",
+        "probation_confirmation",
+        "performance_review",
+        "resignation",
+        "notice_period"
+      ],
+      "target": "handover",
+      "prediction": "handover",
+      "top_3": [
+        "handover",
+        "notice_period",
+        "transfer_review"
+      ]
+    },
+    {
+      "history_id": "synthetic-031",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mentor_assignment",
+        "mandatory_training",
+        "role_training",
+        "probation_review",
+        "probation_extension",
+        "follow_up_review",
+        "probation_confirmation",
+        "performance_review",
+        "resignation",
+        "notice_period",
+        "handover"
+      ],
+      "target": "exit_interview",
+      "prediction": "exit_interview",
+      "top_3": [
+        "exit_interview",
+        "role_training",
+        "employment_end"
+      ]
+    },
+    {
+      "history_id": "synthetic-031",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mentor_assignment",
+        "mandatory_training",
+        "role_training",
+        "probation_review",
+        "probation_extension",
+        "follow_up_review",
+        "probation_confirmation",
+        "performance_review",
+        "resignation",
+        "notice_period",
+        "handover",
+        "exit_interview"
+      ],
+      "target": "employment_end",
+      "prediction": "role_training",
+      "top_3": [
+        "role_training",
+        "employment_end",
+        "handover"
+      ]
+    },
+    {
+      "history_id": "synthetic-031",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mentor_assignment",
+        "mandatory_training",
+        "role_training",
+        "probation_review",
+        "probation_extension",
+        "follow_up_review",
+        "probation_confirmation",
+        "performance_review",
+        "resignation",
+        "notice_period",
+        "handover",
+        "exit_interview",
+        "employment_end"
+      ],
+      "target": "end_of_history",
+      "prediction": "end_of_history",
+      "top_3": [
+        "end_of_history",
+        "exit_interview",
+        "development_plan"
+      ]
+    },
+    {
+      "history_id": "synthetic-035",
+      "prefix": [
+        "hire"
+      ],
+      "target": "orientation",
+      "prediction": "orientation",
+      "top_3": [
+        "orientation",
+        "mandatory_training",
+        "mentor_assignment"
+      ]
+    },
+    {
+      "history_id": "synthetic-035",
+      "prefix": [
+        "hire",
+        "orientation"
+      ],
+      "target": "mentor_assignment",
+      "prediction": "mandatory_training",
+      "top_3": [
+        "mandatory_training",
+        "mentor_assignment",
+        "orientation"
+      ]
+    },
+    {
+      "history_id": "synthetic-035",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mentor_assignment"
+      ],
+      "target": "mandatory_training",
+      "prediction": "mandatory_training",
+      "top_3": [
+        "mandatory_training",
+        "orientation",
+        "mentor_assignment"
+      ]
+    },
+    {
+      "history_id": "synthetic-035",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mentor_assignment",
+        "mandatory_training"
+      ],
+      "target": "role_training",
+      "prediction": "role_training",
+      "top_3": [
+        "role_training",
+        "mentor_assignment",
+        "project_assignment"
+      ]
+    },
+    {
+      "history_id": "synthetic-035",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mentor_assignment",
+        "mandatory_training",
+        "role_training"
+      ],
+      "target": "skills_training",
+      "prediction": "project_assignment",
+      "top_3": [
+        "project_assignment",
+        "probation_review",
+        "skills_training"
+      ]
+    },
+    {
+      "history_id": "synthetic-035",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mentor_assignment",
+        "mandatory_training",
+        "role_training",
+        "skills_training"
+      ],
+      "target": "probation_review",
+      "prediction": "probation_review",
+      "top_3": [
+        "probation_review",
+        "project_assignment",
+        "skills_training"
+      ]
+    },
+    {
+      "history_id": "synthetic-035",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mentor_assignment",
+        "mandatory_training",
+        "role_training",
+        "skills_training",
+        "probation_review"
+      ],
+      "target": "probation_confirmation",
+      "prediction": "probation_confirmation",
+      "top_3": [
+        "probation_confirmation",
+        "probation_extension",
+        "probation_review"
+      ]
+    },
+    {
+      "history_id": "synthetic-035",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mentor_assignment",
+        "mandatory_training",
+        "role_training",
+        "skills_training",
+        "probation_review",
+        "probation_confirmation"
+      ],
+      "target": "performance_review",
+      "prediction": "performance_review",
+      "top_3": [
+        "performance_review",
+        "skills_training",
+        "notice_period"
+      ]
+    },
+    {
+      "history_id": "synthetic-035",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mentor_assignment",
+        "mandatory_training",
+        "role_training",
+        "skills_training",
+        "probation_review",
+        "probation_confirmation",
+        "performance_review"
+      ],
+      "target": "resignation",
+      "prediction": "development_plan",
+      "top_3": [
+        "development_plan",
+        "transfer_request",
+        "resignation"
+      ]
+    },
+    {
+      "history_id": "synthetic-035",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mentor_assignment",
+        "mandatory_training",
+        "role_training",
+        "skills_training",
+        "probation_review",
+        "probation_confirmation",
+        "performance_review",
+        "resignation"
+      ],
+      "target": "notice_period",
+      "prediction": "notice_period",
+      "top_3": [
+        "notice_period",
+        "transfer_review",
+        "handover"
+      ]
+    },
+    {
+      "history_id": "synthetic-035",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mentor_assignment",
+        "mandatory_training",
+        "role_training",
+        "skills_training",
+        "probation_review",
+        "probation_confirmation",
+        "performance_review",
+        "resignation",
+        "notice_period"
+      ],
+      "target": "handover",
+      "prediction": "handover",
+      "top_3": [
+        "handover",
+        "notice_period",
+        "transfer_review"
+      ]
+    },
+    {
+      "history_id": "synthetic-035",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mentor_assignment",
+        "mandatory_training",
+        "role_training",
+        "skills_training",
+        "probation_review",
+        "probation_confirmation",
+        "performance_review",
+        "resignation",
+        "notice_period",
+        "handover"
+      ],
+      "target": "exit_interview",
+      "prediction": "exit_interview",
+      "top_3": [
+        "exit_interview",
+        "role_training",
+        "employment_end"
+      ]
+    },
+    {
+      "history_id": "synthetic-035",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mentor_assignment",
+        "mandatory_training",
+        "role_training",
+        "skills_training",
+        "probation_review",
+        "probation_confirmation",
+        "performance_review",
+        "resignation",
+        "notice_period",
+        "handover",
+        "exit_interview"
+      ],
+      "target": "employment_end",
+      "prediction": "role_training",
+      "top_3": [
+        "role_training",
+        "employment_end",
+        "handover"
+      ]
+    },
+    {
+      "history_id": "synthetic-035",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mentor_assignment",
+        "mandatory_training",
+        "role_training",
+        "skills_training",
+        "probation_review",
+        "probation_confirmation",
+        "performance_review",
+        "resignation",
+        "notice_period",
+        "handover",
+        "exit_interview",
+        "employment_end"
+      ],
+      "target": "end_of_history",
+      "prediction": "end_of_history",
+      "top_3": [
+        "end_of_history",
+        "exit_interview",
+        "development_plan"
+      ]
+    },
+    {
+      "history_id": "synthetic-003",
+      "prefix": [
+        "hire"
+      ],
+      "target": "orientation",
+      "prediction": "orientation",
+      "top_3": [
+        "orientation",
+        "mandatory_training",
+        "mentor_assignment"
+      ]
+    },
+    {
+      "history_id": "synthetic-003",
+      "prefix": [
+        "hire",
+        "orientation"
+      ],
+      "target": "mandatory_training",
+      "prediction": "mandatory_training",
+      "top_3": [
+        "mandatory_training",
+        "mentor_assignment",
+        "orientation"
+      ]
+    },
+    {
+      "history_id": "synthetic-003",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training"
+      ],
+      "target": "role_training",
+      "prediction": "mentor_assignment",
+      "top_3": [
+        "mentor_assignment",
+        "role_training",
+        "mandatory_training"
+      ]
+    },
+    {
+      "history_id": "synthetic-003",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training"
+      ],
+      "target": "probation_review",
+      "prediction": "project_assignment",
+      "top_3": [
+        "project_assignment",
+        "probation_review",
+        "skills_training"
+      ]
+    },
+    {
+      "history_id": "synthetic-003",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "probation_review"
+      ],
+      "target": "probation_confirmation",
+      "prediction": "probation_confirmation",
+      "top_3": [
+        "probation_confirmation",
+        "probation_extension",
+        "probation_review"
+      ]
+    },
+    {
+      "history_id": "synthetic-003",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "probation_review",
+        "probation_confirmation"
+      ],
+      "target": "performance_review",
+      "prediction": "performance_review",
+      "top_3": [
+        "performance_review",
+        "skills_training",
+        "probation_review"
+      ]
+    },
+    {
+      "history_id": "synthetic-003",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "probation_review",
+        "probation_confirmation",
+        "performance_review"
+      ],
+      "target": "resignation",
+      "prediction": "development_plan",
+      "top_3": [
+        "development_plan",
+        "transfer_request",
+        "resignation"
+      ]
+    },
+    {
+      "history_id": "synthetic-003",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "probation_review",
+        "probation_confirmation",
+        "performance_review",
+        "resignation"
+      ],
+      "target": "notice_period",
+      "prediction": "notice_period",
+      "top_3": [
+        "notice_period",
+        "transfer_review",
+        "handover"
+      ]
+    },
+    {
+      "history_id": "synthetic-003",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "probation_review",
+        "probation_confirmation",
+        "performance_review",
+        "resignation",
+        "notice_period"
+      ],
+      "target": "handover",
+      "prediction": "handover",
+      "top_3": [
+        "handover",
+        "notice_period",
+        "transfer_review"
+      ]
+    },
+    {
+      "history_id": "synthetic-003",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "probation_review",
+        "probation_confirmation",
+        "performance_review",
+        "resignation",
+        "notice_period",
+        "handover"
+      ],
+      "target": "exit_interview",
+      "prediction": "exit_interview",
+      "top_3": [
+        "exit_interview",
+        "role_training",
+        "employment_end"
+      ]
+    },
+    {
+      "history_id": "synthetic-003",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "probation_review",
+        "probation_confirmation",
+        "performance_review",
+        "resignation",
+        "notice_period",
+        "handover",
+        "exit_interview"
+      ],
+      "target": "employment_end",
+      "prediction": "role_training",
+      "top_3": [
+        "role_training",
+        "employment_end",
+        "handover"
+      ]
+    },
+    {
+      "history_id": "synthetic-003",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "probation_review",
+        "probation_confirmation",
+        "performance_review",
+        "resignation",
+        "notice_period",
+        "handover",
+        "exit_interview",
+        "employment_end"
+      ],
+      "target": "end_of_history",
+      "prediction": "end_of_history",
+      "top_3": [
+        "end_of_history",
+        "exit_interview",
+        "development_plan"
+      ]
+    },
+    {
+      "history_id": "synthetic-014",
+      "prefix": [
+        "hire"
+      ],
+      "target": "orientation",
+      "prediction": "orientation",
+      "top_3": [
+        "orientation",
+        "mandatory_training",
+        "mentor_assignment"
+      ]
+    },
+    {
+      "history_id": "synthetic-014",
+      "prefix": [
+        "hire",
+        "orientation"
+      ],
+      "target": "mandatory_training",
+      "prediction": "mandatory_training",
+      "top_3": [
+        "mandatory_training",
+        "mentor_assignment",
+        "orientation"
+      ]
+    },
+    {
+      "history_id": "synthetic-014",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training"
+      ],
+      "target": "role_training",
+      "prediction": "mentor_assignment",
+      "top_3": [
+        "mentor_assignment",
+        "role_training",
+        "mandatory_training"
+      ]
+    },
+    {
+      "history_id": "synthetic-014",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training"
+      ],
+      "target": "skills_training",
+      "prediction": "project_assignment",
+      "top_3": [
+        "project_assignment",
+        "probation_review",
+        "skills_training"
+      ]
+    },
+    {
+      "history_id": "synthetic-014",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "skills_training"
+      ],
+      "target": "probation_review",
+      "prediction": "probation_review",
+      "top_3": [
+        "probation_review",
+        "skills_training",
+        "project_assignment"
+      ]
+    },
+    {
+      "history_id": "synthetic-014",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "skills_training",
+        "probation_review"
+      ],
+      "target": "probation_extension",
+      "prediction": "probation_confirmation",
+      "top_3": [
+        "probation_confirmation",
+        "probation_extension",
+        "probation_review"
+      ]
+    },
+    {
+      "history_id": "synthetic-014",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "skills_training",
+        "probation_review",
+        "probation_extension"
+      ],
+      "target": "follow_up_review",
+      "prediction": "follow_up_review",
+      "top_3": [
+        "follow_up_review",
+        "probation_confirmation",
+        "probation_extension"
+      ]
+    },
+    {
+      "history_id": "synthetic-014",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "skills_training",
+        "probation_review",
+        "probation_extension",
+        "follow_up_review"
+      ],
+      "target": "probation_confirmation",
+      "prediction": "probation_confirmation",
+      "top_3": [
+        "probation_confirmation",
+        "probation_extension",
+        "handover"
+      ]
+    },
+    {
+      "history_id": "synthetic-014",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "skills_training",
+        "probation_review",
+        "probation_extension",
+        "follow_up_review",
+        "probation_confirmation"
+      ],
+      "target": "performance_review",
+      "prediction": "performance_review",
+      "top_3": [
+        "performance_review",
+        "skills_training",
+        "notice_period"
+      ]
+    },
+    {
+      "history_id": "synthetic-014",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "skills_training",
+        "probation_review",
+        "probation_extension",
+        "follow_up_review",
+        "probation_confirmation",
+        "performance_review"
+      ],
+      "target": "transfer_request",
+      "prediction": "development_plan",
+      "top_3": [
+        "development_plan",
+        "transfer_request",
+        "resignation"
+      ]
+    },
+    {
+      "history_id": "synthetic-014",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "skills_training",
+        "probation_review",
+        "probation_extension",
+        "follow_up_review",
+        "probation_confirmation",
+        "performance_review",
+        "transfer_request"
+      ],
+      "target": "transfer_review",
+      "prediction": "transfer_review",
+      "top_3": [
+        "transfer_review",
+        "notice_period",
+        "internal_transfer"
+      ]
+    },
+    {
+      "history_id": "synthetic-014",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "skills_training",
+        "probation_review",
+        "probation_extension",
+        "follow_up_review",
+        "probation_confirmation",
+        "performance_review",
+        "transfer_request",
+        "transfer_review"
+      ],
+      "target": "internal_transfer",
+      "prediction": "internal_transfer",
+      "top_3": [
+        "internal_transfer",
+        "transfer_review",
+        "role_training"
+      ]
+    },
+    {
+      "history_id": "synthetic-014",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "skills_training",
+        "probation_review",
+        "probation_extension",
+        "follow_up_review",
+        "probation_confirmation",
+        "performance_review",
+        "transfer_request",
+        "transfer_review",
+        "internal_transfer"
+      ],
+      "target": "role_training",
+      "prediction": "role_training",
+      "top_3": [
+        "role_training",
+        "internal_transfer",
+        "transfer_review"
+      ]
+    },
+    {
+      "history_id": "synthetic-014",
+      "prefix": [
+        "hire",
+        "orientation",
+        "mandatory_training",
+        "role_training",
+        "skills_training",
+        "probation_review",
+        "probation_extension",
+        "follow_up_review",
+        "probation_confirmation",
+        "performance_review",
+        "transfer_request",
+        "transfer_review",
+        "internal_transfer",
+        "role_training"
+      ],
+      "target": "end_of_history",
+      "prediction": "end_of_history",
+      "top_3": [
+        "end_of_history",
+        "exit_interview",
+        "development_plan"
+      ]
+    }
+  ]
+}
